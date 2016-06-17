@@ -8,8 +8,8 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a,b){
   var result = a + b;
   var message = 'The sum of ' + a + ' and ' + b + ' is ' + result + '.';
-  // console.log(message);
-  // console.log('The sum of 4 and 7 is 11.');
+  console.log(message);
+  console.log('The sum of 4 and 7 is 11.');
   return [result, message];
 }
 
@@ -45,12 +45,20 @@ Note: You are not allowed to use the arithmetic operators + and * in this functi
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a,b,c){
-
+function sumAndMultiply(a,b,c) {
+  var addThreeNumbers = sum(a, sum(b,c)[0])[0];
+  console.log(addThreeNumbers);
+  var multiplyThreeNumbers = multiply(a, multiply(b,c)[0])[0];
+  console.log(multiplyThreeNumbers);
+  var message = a + ' and ' + b + ' and ' + c + ' sum to ' + addThreeNumbers + '.';
+  console.log(message);
+  var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyThreeNumbers + '.';
+  console.log(message2);
+  return[addThreeNumbers, multiplyThreeNumbers, message, message2];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. don't forget to create a new branch for your work on the next question!
 
@@ -120,7 +128,7 @@ function testMultiply() {
 }
 
 function testSumAndMultiply() {
-  if (sumAndMultiply(4, 7, 5)[1] === '4 and 7 and 5 sum to 16.' && sumAndMultiply(4, 7, 5)[2] === 'The product of 4 and 7 and 5 is 140.') {
+  if (sumAndMultiply(4, 7, 5)[2] === '4 and 7 and 5 sum to 16.' && sumAndMultiply(4, 7, 5)[3] === 'The product of 4 and 7 and 5 is 140.') {
     console.log('%c TEST FOR sumAndMultiply() PASSES', 'color: green');
   } else {
     console.log('%c TEST FOR sumAndMultiply() FAILS', 'color: red');
