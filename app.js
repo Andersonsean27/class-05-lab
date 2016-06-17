@@ -5,7 +5,7 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a,b){
+function sum(a,b) {
   var result = a + b;
   var message = 'The sum of ' + a + ' and ' + b + ' is ' + result + '.';
   console.log(message);
@@ -47,13 +47,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a,b,c) {
   var addThreeNumbers = sum(a, sum(b,c)[0])[0];
-  console.log(addThreeNumbers);
   var multiplyThreeNumbers = multiply(a, multiply(b,c)[0])[0];
-  console.log(multiplyThreeNumbers);
   var message = a + ' and ' + b + ' and ' + c + ' sum to ' + addThreeNumbers + '.';
-  console.log(message);
   var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyThreeNumbers + '.';
-  console.log(message2);
   return[addThreeNumbers, multiplyThreeNumbers, message, message2];
 }
 
@@ -72,12 +68,16 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 testArray = [2,3,4];
 function sumArray(testArray){
-
+  var finalSum = sum(testArray[0],sum(testArray[1],testArray[2])[0])[0];
+  console.log(finalSum);
+  var message = testArray + ' was passed in as an array of numbers, and ' + finalSum + ' is their sum.';
+  console.log(message);
+  return ([finalSum, message]);
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray();
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
