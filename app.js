@@ -52,7 +52,6 @@ function sumAndMultiply(a,b,c) {
   var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyThreeNumbers + '.';
   return[addThreeNumbers, multiplyThreeNumbers, message, message2];
 }
-
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
 
