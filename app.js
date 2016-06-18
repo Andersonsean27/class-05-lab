@@ -67,7 +67,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 testArray = [2,3,4];
 function sumArray(testArray){
-  var finalSum = sum(testArray[0],sum(testArray[1],testArray[2])[0])[0];
+  var finalSum =    sum(testArray[0],sum(testArray[1],testArray[2])[0])[0];
   console.log(finalSum);
   var message = testArray + ' was passed in as an array of numbers, and ' + finalSum + ' is their sum.';
   console.log(message);
@@ -88,14 +88,21 @@ Note: You are not allowed to use the arithmetic operators + and * in this functi
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+testArray2 = [2,3,4];
+function multiplyArray(testArray2) {
+  var product = multiply(testArray2[0],multiply(testArray[1],testArray[2])[0])[0];
+  console.log(product);
+  var message = 'The numbers ' + testArray2 + ' have a product of ' + product + '.';
+  return [product, message];
 
+}
 // // function multiplyArray(testArray) {
 //
 // };
 
 // Here is the test for multiplyArray(); uncomment it to run it
 
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Submit the link to the repo via Canvas.
 
