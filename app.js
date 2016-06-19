@@ -29,6 +29,8 @@ function multiply(a,b){
   var result = a * b;
   var message = 'The product of ' + a + ' and ' + b + ' is ' + result + '.';
   return [result, message];
+  console.log(result);
+  console.log(message);
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -50,6 +52,10 @@ function sumAndMultiply(a,b,c) {
   var multiplyThreeNumbers = multiply(a, multiply(b,c)[0])[0];
   var message = a + ' and ' + b + ' and ' + c + ' sum to ' + addThreeNumbers + '.';
   var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyThreeNumbers + '.';
+  console.log(addThreeNumbers);
+  console.log(multiplyThreeNumbers);
+  console.log(message);
+  console.log(message2);
   return[addThreeNumbers, multiplyThreeNumbers, message, message2];
 }
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -68,10 +74,10 @@ Test this function by hand in the console to get it working, and when you think 
 testArray = [2,3,4];
 function sumArray(testArray){
   var finalSum =    sum(testArray[0],sum(testArray[1],testArray[2])[0])[0];
-  console.log(finalSum);
   var message = testArray + ' was passed in as an array of numbers, and ' + finalSum + ' is their sum.';
-  console.log(message);
   return ([finalSum, message]);
+  console.log(finalSum);
+  console.log(message);
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -91,10 +97,10 @@ Test this function by hand in the console to get it working, and when you think 
 testArray2 = [2,3,4];
 function multiplyArray(testArray2) {
   var product = multiply(testArray2[0],multiply(testArray[1],testArray[2])[0])[0];
-  console.log(product);
   var message = 'The numbers ' + testArray2 + ' have a product of ' + product + '.';
   return [product, message];
-
+  console.log(product);
+  console.log(message);
 }
 // // function multiplyArray(testArray) {
 //
